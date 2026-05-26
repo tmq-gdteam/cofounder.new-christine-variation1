@@ -37,12 +37,12 @@ function openDrawer(type) {
     title.textContent = 'Pending Decision';
     body.innerHTML = `
       <p><span class="tag approval">[AWAITING APPROVAL]</span> Customer-facing action requires founder confirmation.</p>
-      <div class="recommendation"><strong>Proposal</strong><p>Approve a draft outbound message shell. The actual message body is not invented in this prototype.</p></div>
-      <div class="recommendation"><strong>Why approval is required</strong><p>Customer messaging is a high-risk action. The source pack requires approval-first behavior.</p></div>
-      <div class="recommendation"><strong>What changes on approval</strong><p>A real implementation would quote the exact action and update the activity log. Reversibility window is [MISSING].</p></div>
-      <button class="primary" id="approveDecision">Approve</button>
-      <button class="secondary" id="redirectDecision">Redirect</button>
-      <button class="ghost" id="deferDecision">Defer</button>`;
+      <div class="recommendation glass-card"><strong>Proposal</strong><p>Approve a draft outbound message shell. The actual message body is not invented in this prototype.</p></div>
+      <div class="recommendation glass-card"><strong>Why approval is required</strong><p>Customer messaging is a high-risk action. The source pack requires approval-first behavior.</p></div>
+      <div class="recommendation glass-card"><strong>What changes on approval</strong><p>A real implementation would quote the exact action and update the activity log. Reversibility window is [MISSING].</p></div>
+      <button class="btn-primary" id="approveDecision">Approve</button>
+      <button class="btn-ghost" id="redirectDecision">Redirect</button>
+      <button class="btn-ghost" id="deferDecision">Defer</button>`;
     $('#approveDecision').onclick = () => openModal('Approve this customer-facing draft shell?', 'Reversibility window is [MISSING], so this prototype only demonstrates the confirmation pattern.', false, () => { closeDrawer(); appendLog('> [SEEDED] Founder approved demo decision pattern — no real external action executed.'); showToast('Approved demo decision pattern.'); });
     $('#redirectDecision').onclick = () => { closeDrawer(); openDrawer('chat'); showToast('Decision loaded into chat context.'); };
     $('#deferDecision').onclick = () => { closeDrawer(); showToast('Deferred. Resurface interval is [MISSING].'); };
@@ -51,11 +51,11 @@ function openDrawer(type) {
     title.textContent = 'Artifact Viewer';
     body.innerHTML = `
       <p><span class="tag conceptual">[CONCEPTUAL]</span> Tangible outputs appear here when real artifacts exist.</p>
-      <div class="recommendation"><strong>Artifact body</strong><p>Artifact not available yet — current stage: <code>&gt; drafting → awaiting approval</code>. No deliverable text is fabricated.</p></div>
-      <div class="recommendation"><strong>Why this exists</strong><p>The product value depends on opening real work outputs, not dashboard decoration.</p></div>
-      <button class="primary" id="copyArtifact">Copy placeholder note</button>
-      <button class="secondary" id="commentArtifact">Comment</button>
-      <button class="ghost" data-screen="activity" id="jumpActivity">Open in Activity Log</button>`;
+      <div class="recommendation glass-card"><strong>Artifact body</strong><p>Artifact not available yet — current stage: <code>&gt; drafting → awaiting approval</code>. No deliverable text is fabricated.</p></div>
+      <div class="recommendation glass-card"><strong>Why this exists</strong><p>The product value depends on opening real work outputs, not dashboard decoration.</p></div>
+      <button class="btn-primary" id="copyArtifact">Copy placeholder note</button>
+      <button class="btn-ghost" id="commentArtifact">Comment</button>
+      <button class="btn-ghost" data-screen="activity" id="jumpActivity">Open in Activity Log</button>`;
     $('#copyArtifact').onclick = () => showToast('Copied placeholder note.');
     $('#commentArtifact').onclick = () => { appendLog('> [SEEDED] Founder commented on conceptual artifact shell.'); showToast('Comment pattern recorded.'); };
     $('#jumpActivity').onclick = () => { closeDrawer(); showScreen('activity'); };
@@ -64,9 +64,9 @@ function openDrawer(type) {
     title.textContent = 'Talk to cofounder';
     body.innerHTML = `
       <p><span class="tag demo">[DEMO]</span> Global chat drawer carries current-screen context.</p>
-      <div class="chat-thread" id="drawerChatThread"><div class="message system"><strong>Context</strong><p>Current screen loaded. Ask for explanation, redirect, or decision support.</p></div></div>
-      <form class="composer" id="drawerChatForm"><input id="drawerChatInput" placeholder="Type instruction…" /><button class="primary">Send</button></form>`;
-    $('#drawerChatForm').onsubmit = e => { e.preventDefault(); const value = $('#drawerChatInput').value.trim(); if (!value) return; $('#drawerChatThread').insertAdjacentHTML('beforeend', `<div class="message"><strong>You</strong><p>${escapeHtml(value)}</p></div><div class="message system"><span class="tag demo">[DEMO]</span><strong>Cofounder</strong><p>Received prototype instruction. Real execution requires backend capability confirmation.</p></div>`); $('#drawerChatInput').value = ''; showToast('Demo message sent.'); };
+      <div class="chat-thread" id="drawerChatThread"><div class="message system glass-card"><strong>Context</strong><p>Current screen loaded. Ask for explanation, redirect, or decision support.</p></div></div>
+      <form class="composer" id="drawerChatForm"><input id="drawerChatInput" placeholder="Type instruction…" /><button class="btn-primary">Send</button></form>`;
+    $('#drawerChatForm').onsubmit = e => { e.preventDefault(); const value = $('#drawerChatInput').value.trim(); if (!value) return; $('#drawerChatThread').insertAdjacentHTML('beforeend', `<div class="message glass-card"><strong>You</strong><p>${escapeHtml(value)}</p></div><div class="message system glass-card"><span class="tag demo">[DEMO]</span><strong>Cofounder</strong><p>Received prototype instruction. Real execution requires backend capability confirmation.</p></div>`); $('#drawerChatInput').value = ''; showToast('Demo message sent.'); };
   }
   $('#drawer').classList.add('open');
   $('#drawer').setAttribute('aria-hidden', 'false');
@@ -128,7 +128,7 @@ $('#redirectFromRecommendation').onclick = () => openDrawer('chat');
 $('#deferRecommendation').onclick = () => showToast('Recommendation deferred. Resurface interval is [MISSING].');
 
 $$('.prompt-grid button').forEach(btn => btn.onclick = () => { $('#chatInput').value = btn.dataset.prompt; $('#chatInput').focus(); });
-$('#chatForm').onsubmit = e => { e.preventDefault(); const value = $('#chatInput').value.trim(); if (!value) return; $('#chatThread').insertAdjacentHTML('beforeend', `<div class="message"><strong>You</strong><p>${escapeHtml(value)}</p></div><div class="message system"><span class="tag demo">[DEMO]</span><strong>Cofounder</strong><p>Prototype response only. Real command execution depends on confirmed backend actions and approval rules.</p></div>`); $('#chatInput').value = ''; showToast('Demo chat message sent.'); };
+$('#chatForm').onsubmit = e => { e.preventDefault(); const value = $('#chatInput').value.trim(); if (!value) return; $('#chatThread').insertAdjacentHTML('beforeend', `<div class="message glass-card"><strong>You</strong><p>${escapeHtml(value)}</p></div><div class="message system glass-card"><span class="tag demo">[DEMO]</span><strong>Cofounder</strong><p>Prototype response only. Real command execution depends on confirmed backend actions and approval rules.</p></div>`); $('#chatInput').value = ''; showToast('Demo chat message sent.'); };
 $('#activitySearch').oninput = renderActivity;
 $('#departmentFilter').onchange = renderActivity;
 $('#clearFilters').onclick = () => { $('#activitySearch').value = ''; $('#departmentFilter').value = 'all'; renderActivity(); };

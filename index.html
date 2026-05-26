@@ -44,10 +44,10 @@
       </footer>
     </aside>
 
-    <main class="main" id="main">
+    <main class="main section" id="main">
       <div class="top-strip">
         <div class="status-line"><span class="tag demo">[DEMO]</span> Prototype uses seeded structures only. No real metrics, artifacts, integrations, or AI outputs are presented as real.</div>
-        <button class="ghost" id="openChatTop">Talk to cofounder</button>
+        <button class="btn-ghost btn-compact" id="openChatTop">Talk to cofounder</button>
       </div>
 
       <section class="screen active" id="screen-command" data-title="Command Center">
@@ -58,8 +58,8 @@
             <p>The AI cofounder is visible, auditable, and controllable from one operational surface.</p>
           </div>
           <div class="header-actions">
-            <button class="secondary" data-screen="activity">Open Activity Log</button>
-            <button class="primary" data-action="decision">Open Pending Decision</button>
+            <button class="btn-ghost" data-screen="activity">Open Activity Log</button>
+            <button class="btn-primary" data-action="decision">Open Pending Decision</button>
           </div>
         </header>
 
@@ -67,7 +67,7 @@
           <span class="tag conceptual">[CONCEPTUAL]</span>
           <strong>While you were away</strong>
           <span>Digest hidden until real diff data exists. This banner demonstrates placement only.</span>
-          <button class="ghost compact">Dismiss</button>
+          <button class="btn-ghost btn-compact">Dismiss</button>
         </section>
 
         <section class="metric-strip" aria-label="Platform-wide demo metrics">
@@ -78,7 +78,7 @@
         </section>
 
         <div class="grid two">
-          <section class="panel urgent">
+          <section class="glass-card urgent">
             <div class="panel-head"><h2>Pending Decisions</h2><span class="tag approval">[AWAITING APPROVAL] 03</span></div>
             <button class="decision-row" data-action="decision">
               <span class="tag warn">[WARN]</span>
@@ -97,7 +97,7 @@
             </button>
           </section>
 
-          <section class="panel">
+          <section class="glass-card">
             <div class="panel-head"><h2>Today's Highlights</h2><span class="tag demo">[SEEDED]</span></div>
             <div class="highlight-grid">
               <div><small>WINS</small><p>No real wins shown until confirmed activity exists.</p></div>
@@ -108,111 +108,111 @@
         </div>
 
         <section class="business-cards" aria-label="Business cards">
-          <article class="business-card" data-screen="business"><span class="tag running">[RUNNING]</span><h3>Northstar Labs</h3><p>SaaS concept</p><dl><div><dt>Health</dt><dd>—</dd></div><div><dt>Revenue</dt><dd>—</dd></div><div><dt>Last action</dt><dd>02m 14s</dd></div></dl><small>Scores hidden: formulas are [MISSING].</small></article>
-          <article class="business-card" data-screen="business"><span class="tag warn">[WARN]</span><h3>Signal Grove</h3><p>Marketplace concept</p><dl><div><dt>Health</dt><dd>—</dd></div><div><dt>Revenue</dt><dd>—</dd></div><div><dt>Last action</dt><dd>19m 03s</dd></div></dl><small>Review needed before customer messaging.</small></article>
-          <article class="business-card empty"><span class="tag new">[NEW]</span><h3>Atlas Draft</h3><p>Business shell</p><dl><div><dt>Health</dt><dd>—</dd></div><div><dt>Revenue</dt><dd>—</dd></div><div><dt>Last action</dt><dd>none</dd></div></dl><small>Engine warming up — no fake metrics.</small></article>
+          <article class="glass-card business-card interactive" data-screen="business"><span class="tag running">[RUNNING]</span><h3>Northstar Labs</h3><p>SaaS concept</p><dl><div><dt>Health</dt><dd>—</dd></div><div><dt>Revenue</dt><dd>—</dd></div><div><dt>Last action</dt><dd>02m 14s</dd></div></dl><small>Scores hidden: formulas are [MISSING].</small></article>
+          <article class="glass-card business-card interactive" data-screen="business"><span class="tag warn">[WARN]</span><h3>Signal Grove</h3><p>Marketplace concept</p><dl><div><dt>Health</dt><dd>—</dd></div><div><dt>Revenue</dt><dd>—</dd></div><div><dt>Last action</dt><dd>19m 03s</dd></div></dl><small>Review needed before customer messaging.</small></article>
+          <article class="glass-card business-card empty interactive"><span class="tag new">[NEW]</span><h3>Atlas Draft</h3><p>Business shell</p><dl><div><dt>Health</dt><dd>—</dd></div><div><dt>Revenue</dt><dd>—</dd></div><div><dt>Last action</dt><dd>none</dd></div></dl><small>Engine warming up — no fake metrics.</small></article>
         </section>
 
-        <section class="panel feed-panel">
+        <section class="glass-card feed-panel">
           <div class="panel-head"><h2>Live Activity Feed</h2><span class="tag conceptual">[CONCEPTUAL]</span></div>
           <div class="empty-engine" id="engineEmpty"><span class="heartbeat">▌</span> Engine warming up — real-time infrastructure is [MISSING]. Demo log controls below append clearly labeled seeded rows.</div>
           <div class="feed" id="liveFeed" aria-live="polite"></div>
-          <button class="secondary" id="appendDemoLog">Append [SEEDED] log line</button>
+          <button class="btn-ghost" id="appendDemoLog">Append [SEEDED] log line</button>
         </section>
       </section>
 
       <section class="screen" id="screen-business" data-title="Business Detail">
         <header class="page-header compact-header">
           <div><p class="eyebrow">BUSINESS DETAIL</p><h1>Northstar Labs</h1><p>Single-business mission control with department tabs, task rail, recommendations, and controls.</p></div>
-          <div class="header-actions"><button class="secondary" id="pauseBusiness">Pause</button><button class="danger" id="archiveBusiness">Archive</button></div>
+          <div class="header-actions"><button class="btn-ghost" id="pauseBusiness">Pause</button><button class="btn-danger" id="archiveBusiness">Archive</button></div>
         </header>
         <section class="score-row">
-          <div class="score"><small>Health</small><strong>—</strong><span class="tag missing">[MISSING FORMULA]</span></div>
-          <div class="score"><small>AI confidence</small><strong>—</strong><span class="tag missing">[MISSING FORMULA]</span></div>
-          <div class="score"><small>Growth rate</small><strong>—</strong><span class="tag missing">[MISSING DATA]</span></div>
-          <div class="score slider-score"><small>Autonomy</small><input id="autonomy" type="range" min="1" max="3" value="2" /><span id="autonomyLabel">Medium — approvals required for risk</span></div>
+          <div class="glass-card score"><small>Health</small><strong>—</strong><span class="tag missing">[MISSING FORMULA]</span></div>
+          <div class="glass-card score"><small>AI confidence</small><strong>—</strong><span class="tag missing">[MISSING FORMULA]</span></div>
+          <div class="glass-card score"><small>Growth rate</small><strong>—</strong><span class="tag missing">[MISSING DATA]</span></div>
+          <div class="glass-card score slider-score"><small>Autonomy</small><input id="autonomy" type="range" min="1" max="3" value="2" /><span id="autonomyLabel">Medium — approvals required for risk</span></div>
         </section>
         <div class="business-workspace">
-          <section class="panel workspace-main">
+          <section class="glass-card workspace-main">
             <div class="tabs" role="tablist" aria-label="Departments">
-              <button class="tab active" data-tab="overview">Overview <span>04</span></button>
-              <button class="tab" data-tab="strategy">Strategy <span>01</span></button>
-              <button class="tab" data-tab="product">Product <span>02</span></button>
-              <button class="tab" data-tab="marketing">Marketing <span>03</span></button>
-              <button class="tab" data-tab="finance">Finance <span>01</span></button>
-              <button class="tab" data-tab="sales">Sales <span>00</span></button>
-              <button class="tab" data-tab="analytics">Analytics <span>01</span></button>
+              <button class="tab active" data-tab="overview">🎯 Overview <span>04</span></button>
+              <button class="tab" data-tab="strategy">💻 Strategy <span>01</span></button>
+              <button class="tab" data-tab="product">🚀 Product <span>02</span></button>
+              <button class="tab" data-tab="marketing">📣 Marketing <span>03</span></button>
+              <button class="tab" data-tab="finance">💰 Finance <span>01</span></button>
+              <button class="tab" data-tab="sales">🤝 Sales <span>00</span></button>
+              <button class="tab" data-tab="analytics">📊 Analytics <span>01</span></button>
             </div>
             <div class="tab-panel active" id="tab-overview">
               <h2>Overview</h2>
-              <div class="recommendation"><span class="tag approval">[AWAITING APPROVAL]</span><h3>Review suggested next action</h3><p>The system can propose work, but high-risk execution stays approval-first until action taxonomy and reversibility windows are confirmed.</p><button class="primary" data-action="decision">Open Decision</button><button class="secondary" id="redirectFromRecommendation">Redirect</button><button class="ghost" id="deferRecommendation">Defer</button></div>
-              <div class="artifact-grid"><button class="artifact" data-action="artifact"><span class="tag conceptual">[CONCEPTUAL]</span><strong>Strategy memo shell</strong><small>Artifact viewer demonstrates where real outputs appear.</small></button><button class="artifact" data-action="artifact"><span class="tag missing">[MISSING DATA]</span><strong>Financial report unavailable</strong><small>No report body is invented.</small></button></div>
+              <div class="recommendation glass-card"><span class="tag approval">[AWAITING APPROVAL]</span><h3>Review suggested next action</h3><p>The system can propose work, but high-risk execution stays approval-first until action taxonomy and reversibility windows are confirmed.</p><button class="btn-primary" data-action="decision">Open Decision</button><button class="btn-ghost" id="redirectFromRecommendation">Redirect</button><button class="btn-ghost" id="deferRecommendation">Defer</button></div>
+              <div class="artifact-grid"><button class="artifact glass-card" data-action="artifact"><span class="tag conceptual">[CONCEPTUAL]</span><strong>Strategy memo shell</strong><small>Artifact viewer demonstrates where real outputs appear.</small></button><button class="artifact glass-card" data-action="artifact"><span class="tag missing">[MISSING DATA]</span><strong>Financial report unavailable</strong><small>No report body is invented.</small></button></div>
             </div>
             <div class="tab-panel" id="tab-strategy"><h2>Strategy</h2><p class="empty-state">No confirmed strategy artifact yet. <span class="tag missing">[MISSING DATA]</span></p></div>
-            <div class="tab-panel" id="tab-product"><h2>Product</h2><p class="stage">&gt; drafting spec → waiting for approval → deploy blocked</p><button class="artifact" data-action="artifact"><span class="tag blocked">[BLOCKED]</span><strong>Release note draft shell</strong><small>Open conceptual artifact drawer.</small></button></div>
-            <div class="tab-panel" id="tab-marketing"><h2>Marketing</h2><p class="stage">&gt; audience review → copy draft → founder approval</p><button class="artifact" data-action="artifact"><span class="tag approval">[AWAITING APPROVAL]</span><strong>Outbound message draft shell</strong><small>Customer-facing content requires approval.</small></button></div>
+            <div class="tab-panel" id="tab-product"><h2>Product</h2><p class="stage">&gt; drafting spec → waiting for approval → deploy blocked</p><button class="artifact glass-card" data-action="artifact"><span class="tag blocked">[BLOCKED]</span><strong>Release note draft shell</strong><small>Open conceptual artifact drawer.</small></button></div>
+            <div class="tab-panel" id="tab-marketing"><h2>Marketing</h2><p class="stage">&gt; audience review → copy draft → founder approval</p><button class="artifact glass-card" data-action="artifact"><span class="tag approval">[AWAITING APPROVAL]</span><strong>Outbound message draft shell</strong><small>Customer-facing content requires approval.</small></button></div>
             <div class="tab-panel" id="tab-finance"><h2>Finance</h2><p class="empty-state">Finance metrics hidden until formulas and data sources are confirmed.</p></div>
             <div class="tab-panel" id="tab-sales"><h2>Sales</h2><p class="empty-state">No active sales tasks. Next queued task unavailable until action taxonomy exists.</p></div>
             <div class="tab-panel" id="tab-analytics"><h2>Analytics</h2><p class="empty-state">Analytics tab ready; no fabricated dashboards or fake conversion metrics.</p></div>
           </section>
-          <aside class="panel right-rail">
+          <aside class="glass-card right-rail">
             <div class="panel-head"><h2>Task Rail</h2><span class="tag running">[RUNNING]</span></div>
-            <div class="task-card"><span class="tag retry">[RETRY 2/5]</span><strong>Validate source-safe artifact state</strong><p class="stage">&gt; checking source → validating placeholders → ready</p><small class="timer">00h 24m 11s</small></div>
-            <div class="task-card"><span class="tag blocked">[BLOCKED]</span><strong>Customer message send</strong><p>Awaiting founder approval.</p><button class="secondary" data-action="decision">Review</button></div>
-            <div class="task-card"><span class="tag conceptual">[CONCEPTUAL]</span><strong>Cross-department handoff</strong><p>Hidden in production until data model exists.</p></div>
+            <div class="task-card glass-card"><span class="tag retry">[RETRY 2/5]</span><strong>Validate source-safe artifact state</strong><p class="stage">&gt; checking source → validating placeholders → ready</p><small class="timer">00h 24m 11s</small></div>
+            <div class="task-card glass-card"><span class="tag blocked">[BLOCKED]</span><strong>Customer message send</strong><p>Awaiting founder approval.</p><button class="btn-ghost" data-action="decision">Review</button></div>
+            <div class="task-card glass-card"><span class="tag conceptual">[CONCEPTUAL]</span><strong>Cross-department handoff</strong><p>Hidden in production until data model exists.</p></div>
           </aside>
         </div>
       </section>
 
       <section class="screen" id="screen-chat" data-title="Chat">
         <header class="page-header"><div><p class="eyebrow">DIRECT COMMAND LAYER</p><h1>Chat / Direct</h1><p>Persistent context-aware conversation surface, not generic support chat.</p></div></header>
-        <section class="panel chat-canvas">
+        <section class="glass-card chat-canvas">
           <div class="chat-thread" id="chatThread">
-            <div class="message system"><span class="tag demo">[DEMO]</span><strong>System</strong><p>Ask about a business, artifact, decision, or activity entry. Responses here are prototype messages only.</p></div>
+            <div class="message system glass-card"><span class="tag demo">[DEMO]</span><strong>System</strong><p>Ask about a business, artifact, decision, or activity entry. Responses here are prototype messages only.</p></div>
             <div class="prompt-grid"><button data-prompt="Explain why the pricing decision is blocked.">Explain blocked decision</button><button data-prompt="Compare active tasks for Northstar Labs.">Compare active tasks</button><button data-prompt="Draft a redirect instruction for the customer message.">Draft redirect instruction</button></div>
           </div>
-          <form class="composer" id="chatForm"><select aria-label="Context"><option>Context: All businesses</option><option>Northstar Labs</option><option>Current decision</option></select><input id="chatInput" placeholder="Type command or question…" /><button class="primary" type="submit">Send</button></form>
+          <form class="composer" id="chatForm"><select aria-label="Context"><option>Context: All businesses</option><option>Northstar Labs</option><option>Current decision</option></select><input id="chatInput" placeholder="Type command or question…" /><button class="btn-primary" type="submit">Send</button></form>
         </section>
       </section>
 
       <section class="screen" id="screen-activity" data-title="Activity Log">
-        <header class="page-header"><div><p class="eyebrow">AUDIT SURFACE</p><h1>Activity Log</h1><p>Chronological record of actions across businesses, with filters, search, entry details, and CSV export pattern.</p></div><button class="primary" id="exportCsv">Export CSV</button></header>
-        <section class="panel activity-layout">
-          <aside class="filter-rail"><label>Search<input id="activitySearch" placeholder="Search entries…" /></label><label>Department<select id="departmentFilter"><option value="all">All</option><option>Marketing</option><option>Product</option><option>Finance</option><option>Strategy</option></select></label><button class="ghost" id="clearFilters">Clear filters</button></aside>
+        <header class="page-header"><div><p class="eyebrow">AUDIT SURFACE</p><h1>Activity Log</h1><p>Chronological record of actions across businesses, with filters, search, entry details, and CSV export pattern.</p></div><button class="btn-primary" id="exportCsv">Export CSV</button></header>
+        <section class="glass-card activity-layout">
+          <aside class="filter-rail"><label>Search<input id="activitySearch" placeholder="Search entries…" /></label><label>Department<select id="departmentFilter"><option value="all">All</option><option>Marketing</option><option>Product</option><option>Finance</option><option>Strategy</option></select></label><button class="btn-ghost" id="clearFilters">Clear filters</button></aside>
           <div class="activity-table" id="activityRows"></div>
         </section>
       </section>
 
       <section class="screen" id="screen-onboarding" data-title="Onboarding">
         <header class="page-header"><div><p class="eyebrow">SETUP FLOW</p><h1>Onboarding</h1><p>Trust-before-autonomy: describe, define audience, set autonomy, upload assets, review plan, then launch.</p></div></header>
-        <section class="panel onboarding-card">
+        <section class="glass-card onboarding-card">
           <div class="stepper" id="stepper">Step 1 of 6</div>
           <div class="onboarding-step active" data-step="1"><h2>What are you building?</h2><textarea id="businessIdea" placeholder="Describe the business idea…"></textarea><p class="helper">Required. The app should not start execution until a plan is reviewed.</p></div>
           <div class="onboarding-step" data-step="2"><h2>Who is it for?</h2><textarea placeholder="Define the target audience…"></textarea></div>
           <div class="onboarding-step" data-step="3"><h2>Autonomy level</h2><div class="radio-stack"><label><input type="radio" name="auto" /> Low — approve most work</label><label><input type="radio" name="auto" checked /> Medium — approve risky work</label><label><input type="radio" name="auto" /> High — approval still required for high-risk actions</label></div></div>
-          <div class="onboarding-step" data-step="4"><h2>Existing assets</h2><div class="upload">Drop files here or click to upload <span class="tag missing">[LIMITS MISSING]</span></div><button class="ghost">Skip for now</button></div>
-          <div class="onboarding-step" data-step="5"><h2>Plan review</h2><div class="plan"><span class="tag demo">[DEMO STRUCTURE]</span><p>No AI plan is fabricated. This card shows where interpretation and execution plan will appear after backend confirmation.</p><p class="stage">&gt; parsing source → generating plan → awaiting founder approval</p></div><button class="secondary">Refine inputs</button></div>
-          <div class="onboarding-step" data-step="6"><h2>Approval & launch</h2><p>Start Execution triggers the signature handoff. The first line below is labeled seeded unless real streaming exists.</p><div class="launch-strip" id="launchStrip">&gt; waiting for founder confirmation</div></div>
-          <div class="onboarding-actions"><button class="secondary" id="prevStep">Back</button><button class="primary" id="nextStep">Next</button></div>
+          <div class="onboarding-step" data-step="4"><h2>Existing assets</h2><div class="upload">Drop files here or click to upload <span class="tag missing">[LIMITS MISSING]</span></div><button class="btn-ghost">Skip for now</button></div>
+          <div class="onboarding-step" data-step="5"><h2>Plan review</h2><div class="plan glass-card"><span class="tag demo">[DEMO STRUCTURE]</span><p>No AI plan is fabricated. This card shows where interpretation and execution plan will appear after backend confirmation.</p><p class="stage">&gt; parsing source → generating plan → awaiting founder approval</p></div><button class="btn-ghost">Refine inputs</button></div>
+          <div class="onboarding-step" data-step="6"><h2>Approval & launch</h2><p>Start Execution triggers the signature handoff. The first line below is labeled seeded unless real streaming exists.</p><div class="launch-strip glass-card" id="launchStrip">&gt; waiting for founder confirmation</div></div>
+          <div class="onboarding-actions"><button class="btn-ghost" id="prevStep">Back</button><button class="btn-primary" id="nextStep">Next</button></div>
         </section>
       </section>
 
       <section class="screen" id="screen-settings" data-title="Settings">
         <header class="page-header"><div><p class="eyebrow">ACCOUNT CONTROLS</p><h1>Settings</h1><p>Tabbed controls for account, billing, notifications, API, integrations, data export, and danger zone.</p></div></header>
-        <section class="panel settings-panel">
+        <section class="glass-card settings-panel">
           <div class="settings-tabs"><button class="settings-tab active" data-settings="account">Account</button><button class="settings-tab" data-settings="billing">Billing</button><button class="settings-tab" data-settings="notifications">Notifications</button><button class="settings-tab" data-settings="api">API & Webhooks</button><button class="settings-tab" data-settings="integrations">Integrations</button><button class="settings-tab" data-settings="data">Data Export</button><button class="settings-tab" data-settings="danger">Danger Zone</button></div>
-          <div class="settings-content active" id="settings-account"><h2>Account</h2><label>Name<input value="Founder" /></label><label>Email<input value="founder@example.com" /></label><button class="primary">Save changes</button></div>
-          <div class="settings-content" id="settings-billing"><h2>Billing</h2><p><span class="tag missing">[PRICING VALIDATION MISSING]</span> Billing portal deep-link placeholder.</p><button class="secondary">Open billing provider</button></div>
+          <div class="settings-content active" id="settings-account"><h2>Account</h2><label>Name<input value="Founder" /></label><label>Email<input value="founder@example.com" /></label><button class="btn-primary">Save changes</button></div>
+          <div class="settings-content" id="settings-billing"><h2>Billing</h2><p><span class="tag missing">[PRICING VALIDATION MISSING]</span> Billing portal deep-link placeholder.</p><button class="btn-ghost">Open billing provider</button></div>
           <div class="settings-content" id="settings-notifications"><h2>Notifications</h2><p><span class="tag missing">[CHANNELS MISSING]</span> Toggle shells shown disabled until channel infra exists.</p><label class="disabled"><input type="checkbox" disabled /> Email digest</label><label class="disabled"><input type="checkbox" disabled /> Slack alerts</label></div>
-          <div class="settings-content" id="settings-api"><h2>API & Webhooks</h2><p><span class="tag conceptual">[OPTIONAL MVP]</span> API behavior and schemas are missing.</p><button class="secondary" disabled title="API architecture missing">Generate key</button></div>
-          <div class="settings-content" id="settings-integrations"><h2>Integrations</h2><div class="integration-row"><strong>Stripe</strong><span class="tag unavailable">[NOT YET AVAILABLE]</span><button disabled>Connect</button></div><div class="integration-row"><strong>Google Analytics</strong><span class="tag unavailable">[NOT YET AVAILABLE]</span><button disabled>Connect</button></div><div class="integration-row"><strong>Slack</strong><span class="tag unavailable">[NOT YET AVAILABLE]</span><button disabled>Connect</button></div></div>
-          <div class="settings-content" id="settings-data"><h2>Data Export</h2><p>Export account-wide or per-business data when backed by real records.</p><button class="primary" id="settingsExport">Export account data</button></div>
-          <div class="settings-content" id="settings-danger"><h2>Danger Zone</h2><p>Destructive actions require typed confirmation.</p><button class="danger" id="deleteAccount">Delete account</button></div>
+          <div class="settings-content" id="settings-api"><h2>API & Webhooks</h2><p><span class="tag conceptual">[OPTIONAL MVP]</span> API behavior and schemas are missing.</p><button class="btn-ghost" disabled title="API architecture missing">Generate key</button></div>
+          <div class="settings-content" id="settings-integrations"><h2>Integrations</h2><div class="integration-row glass-card"><strong>Stripe</strong><span class="tag unavailable">[NOT YET AVAILABLE]</span><button class="btn-ghost" disabled>Connect</button></div><div class="integration-row glass-card"><strong>Google Analytics</strong><span class="tag unavailable">[NOT YET AVAILABLE]</span><button class="btn-ghost" disabled>Connect</button></div><div class="integration-row glass-card"><strong>Slack</strong><span class="tag unavailable">[NOT YET AVAILABLE]</span><button class="btn-ghost" disabled>Connect</button></div></div>
+          <div class="settings-content" id="settings-data"><h2>Data Export</h2><p>Export account-wide or per-business data when backed by real records.</p><button class="btn-primary" id="settingsExport">Export account data</button></div>
+          <div class="settings-content" id="settings-danger"><h2>Danger Zone</h2><p>Destructive actions require typed confirmation.</p><button class="btn-danger" id="deleteAccount">Delete account</button></div>
         </section>
       </section>
     </main>
 
-    <button class="floating-chat" id="floatingChat">Talk to cofounder</button>
+    <button class="floating-chat pulse-dot" id="floatingChat">Talk to cofounder</button>
 
     <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Context drawer">
       <div class="drawer-head"><strong id="drawerTitle">Drawer</strong><button id="closeDrawer" aria-label="Close drawer">×</button></div>
@@ -224,7 +224,7 @@
         <h2 id="modalTitle">Confirm action</h2>
         <p id="modalText">Confirm this action.</p>
         <input id="typedConfirm" class="hidden" placeholder="Type DELETE to confirm" />
-        <div class="modal-actions"><button class="secondary" id="cancelModal">Cancel</button><button class="primary" id="confirmModal">Confirm</button></div>
+        <div class="modal-actions"><button class="btn-ghost" id="cancelModal">Cancel</button><button class="btn-primary" id="confirmModal">Confirm</button></div>
       </div>
     </div>
 
